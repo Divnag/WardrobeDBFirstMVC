@@ -1,57 +1,49 @@
-﻿@model IEnumerable<WardrobeDBFirstMVC.Models.Shoe>
+﻿<link href="~/Content/StyleSheet.css" rel="stylesheet" />
+@model IEnumerable<WardrobeDBFirstMVC.Models.Shoe>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+   <a class="glyphicon glyphicon-new-window btn btn-default" href=" @Url.Action("Create", "Shoes")"></a>
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoeName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoePhoto)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Color)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Occassion.Occassion1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Season.Season)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoeName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoePhoto)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Color)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Occassion.Occassion1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Season.Season)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ShoeID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ShoeID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ShoeID })
-        </td>
-    </tr>
-}
+    <div class="row">
+        @foreach (var item in Model)
+        {
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <div class="caption">
 
-</table>
+                    @*<p>
+                        @Html.DisplayNameFor(model => model.ShoeName): @Html.DisplayFor(modelItem => item.ShoeName)
+                    </p>*@
+                    <p>
+                        <img src=" @Html.DisplayFor(modelItem => item.ShoePhoto)" class="image"height="100" width="100" />
+                    </p>
+                    @*<p>
+                        @Html.DisplayNameFor(model => model.Color): @Html.DisplayFor(modelItem => item.Color)
+                    </p>
+                    <p>
+                        @Html.DisplayNameFor(model => model.Occassion):@Html.DisplayFor(modelItem => item.Occassion.Occassion1)
+                    </p>
+                    <p>
+                        @Html.DisplayNameFor(model => model.Season):@Html.DisplayFor(modelItem => item.Season.Season)
+                    </p>*@
+                    
+                    <p>
+                        @*@Html.ActionLink("Edit", "Edit", new { id = item.ShoeID }) |*@
+                        <a class=" glyphicon glyphicon-tag btn btn-default" href="@Url.Action("Details", new { id = item.ShoeID })"> </a>
+                        @*@Html.ActionLink("Delete", "Delete", new { id = item.ShoeID })*@
+                    </p>
+                        
+                </div>
+            </div>
+        </div>
+        
+    }
+        </div>
+
+    </table>

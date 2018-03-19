@@ -1,58 +1,39 @@
-﻿@model WardrobeDBFirstMVC.Models.Top
+﻿<link href="~/Content/StyleSheet.css" rel="stylesheet" />
+@model WardrobeDBFirstMVC.Models.Top
 
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Top</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.TopName)
-        </dt>
+<div class="row">
+    <div class="col-md-5"></div>
+    <div class="col-md-2">
+        <div class="thumbnail">
+            <div class="caption">
+                <p>
+                    <img src=" @Html.DisplayFor(model => model.TopPhoto)" class="image" />
+                </p>
+                <p>
+                    @Html.DisplayNameFor(model => model.TopName):@Html.DisplayFor(model => model.TopName)
+                </p>
+                                <p>
+                    @Html.DisplayNameFor(model => model.Color):  @Html.DisplayFor(model => model.Color)
+                </p>
+                <p>
+                    Occassion: @Html.DisplayFor(model => model.Occassion.Occassion1)
+                </p>
+                <p>
+                    @Html.DisplayNameFor(model => model.Season.Season): @Html.DisplayFor(model => model.Season.Season)
+                </p>
+                
+                <p>
+                    <a class="glyphicon glyphicon-edit btn btn-default" href=" @Url.Action("Edit", new { id = Model.TopID })"></a>
+                    <a class="glyphicon glyphicon-home  btn btn-default" href="@Url.Action("Index","Tops")"></a>
+                    <a class="glyphicon glyphicon-erase  btn btn-default" href="@Url.Action("Delete", new { id = Model.TopID })"></a>
+                </p>
+                </div>
+            </div>
+        </div> 
+    </div> 
 
-        <dd>
-            @Html.DisplayFor(model => model.TopName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TopPhoto)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TopPhoto)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Color)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Color)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Occassion.Occassion1)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Occassion.Occassion1)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Season.Season)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Season.Season)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.TopID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

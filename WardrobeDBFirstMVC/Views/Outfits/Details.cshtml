@@ -1,66 +1,50 @@
-﻿@model WardrobeDBFirstMVC.Models.Outfit
+﻿<link href="~/Content/StyleSheet.css" rel="stylesheet" />
+@model WardrobeDBFirstMVC.Models.Outfit
 
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+
 
 <div>
     <h4>Outfit</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Accessory.AccessName)
-        </dt>
+   <div class="row">
+       <div class="col-md-4"></div>
+       <div class=" col-md-3">
+           <div class=" thumbnail">
+               <div class="caption">
+                   <p>
+                       <strong> @Html.DisplayNameFor(model => model.Top.TopName)</strong>: @Html.DisplayFor(model => model.Top.TopName)
+                   </p>
+                   <p>
+                       <strong> @Html.DisplayNameFor(model => model.Bottom.BottomName)</strong>:  @Html.DisplayFor(model => model.Bottom.BottomName)
+                   </p>
+                   <p>
+                       <strong>@Html.DisplayNameFor(model => model.Shoe.ShoeName)</strong>:@Html.DisplayFor(model => model.Shoe.ShoeName)
+                   </p>
+                   <p>
+                       <strong> @Html.DisplayNameFor(model => model.Accessory.AccessName)</strong>:  @Html.DisplayFor(model => model.Accessory.AccessName)
+                   </p>
+                   <p>
+                       <strong>@Html.DisplayNameFor(model => model.Season.Season)</strong>:  @Html.DisplayFor(model => model.Season.Season)
+                   </p>
 
-        <dd>
-            @Html.DisplayFor(model => model.Accessory.AccessName)
-        </dd>
+                   <p>
+                       <strong>Occassion</strong>: @Html.DisplayFor(model => model.Occassion.Occassion1)
+                   </p>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Bottom.BottomName)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Bottom.BottomName)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Occassion.Occassion1)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Occassion.Occassion1)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Season.Season)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Season.Season)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Shoe.ShoeName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Shoe.ShoeName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Top.TopName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Top.TopName)
-        </dd>
-
-    </dl>
+                   <p>
+                       <a class="glyphicon glyphicon-edit btn btn-default" href=" @Url.Action( "Edit", new { id = Model.OutfitID })"></a>
+                       <a class="glyphicon glyphicon-home btn btn-default" href=" @Url.Action("Index","Outfits")"></a>
+                   </p>
+                   
+               </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.OutfitID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+</div>
+</div>
+</div>

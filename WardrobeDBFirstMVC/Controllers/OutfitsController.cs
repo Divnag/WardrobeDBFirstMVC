@@ -45,7 +45,7 @@ namespace WardrobeDBFirstMVC.Controllers
             ViewBag.SesonID = new SelectList(db.Seasons1, "SeasonID", "Season");
             ViewBag.ShoeID = new SelectList(db.Shoes, "ShoeID", "ShoeName");
             ViewBag.TopID = new SelectList(db.Tops, "TopID", "TopName");
-            return View();
+             return View();
         }
 
         // POST: Outfits/Create
@@ -68,7 +68,7 @@ namespace WardrobeDBFirstMVC.Controllers
             ViewBag.SesonID = new SelectList(db.Seasons1, "SeasonID", "Season", outfit.SesonID);
             ViewBag.ShoeID = new SelectList(db.Shoes, "ShoeID", "ShoeName", outfit.ShoeID);
             ViewBag.TopID = new SelectList(db.Tops, "TopID", "TopName", outfit.TopID);
-            return View(outfit);
+              return View(outfit);
         }
 
         // GET: Outfits/Edit/5

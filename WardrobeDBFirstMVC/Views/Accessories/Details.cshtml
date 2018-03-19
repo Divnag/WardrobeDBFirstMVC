@@ -1,58 +1,42 @@
-﻿@model WardrobeDBFirstMVC.Models.Accessory
+﻿<link href="~/Content/StyleSheet.css" rel="stylesheet" />
+@model WardrobeDBFirstMVC.Models.Accessory
 
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Accessory</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.AccessName)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.AccessName)
-        </dd>
+<div class="row">
+    <div class="col-md-5"></div>
+    <div class="col-md-2">
+        <div class="thumbnail">
+            <div class="caption">
+                <p>
+                    <img src="@Html.DisplayFor(model => model.AccessPhoto)"class="image" />
+                </p>
+                <p>
+                    @Html.DisplayNameFor(model => model.AccessName):  @Html.DisplayFor(model => model.AccessName)
+                </p>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AccessPhoto)
-        </dt>
+                <p>
+                    @Html.DisplayNameFor(model => model.Color): @Html.DisplayFor(model => model.Color)
+                </p>
 
-        <dd>
-            @Html.DisplayFor(model => model.AccessPhoto)
-        </dd>
+                <p>
+                    Occassion:@Html.DisplayFor(model => model.Occassion.Occassion1)
+                </p>
+                <p>
+                    @Html.DisplayNameFor(model => model.Season.Season): @Html.DisplayFor(model => model.Season.Season)
+                </p>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Color)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Color)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Occassion.Occassion1)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Occassion.Occassion1)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Season.Season)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Season.Season)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.AccessID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+           
+                <p>
+                    <a class="glyphicon glyphicon-edit btn btn-default " href=" @Url.Action("Edit", new { id = Model.AccessID })"></a>
+                    <a class=" glyphicon glyphicon-home btn btn-default " href="@Url.Action( "Index","Accessories")"></a>
+                    <a class=" glyphicon glyphicon-erase btn btn-default " href="@Url.Action( "Delete",new { id = Model.AccessID })"></a>
+                </p>
+                </div>
+            </div> 
+        </div>
+    </div>

@@ -1,0 +1,82 @@
+﻿body {
+    font-family: 'Crimson Text', serif;
+}
+
+/*navbar classes*/
+.navbar-inverse {
+    background-color: #4b0202;
+   
+}
+
+
+
+    .navbar-brand:hover {
+        color: white;
+    }
+
+ul.nav.navbar-nav{
+    float:right;
+}
+/*classes form jumbotron*/
+.jumbotron {
+    background: url('images/wardrobe.jpg'),no-repeat,center,center;
+    background-size: contain;
+    height: 55vh;
+    text-align: center;
+    padding-top: 10vh;
+    padding-left: 20%;
+    padding-right: 20%;
+    border-bottom: 4px solid #4b0202;
+}
+
+.jumbotron-titlebox {
+    background-color: rgba(181, 177, 175, .6);
+    padding: 10px;
+    color:#4b0202;
+}
+
+
+
+
+/*div.index-infoholder {
+    text-align: center;
+    width: 95%;
+    background-color: rgb(224, 220, 217);
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #565656;
+}
+
+.index-name {
+    text-align: center;
+}*/
+
+/*text treatment classes*/
+.jumbotron h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    text-transform: capitalize
+}
+
+.col-md-3 h2 {
+    color: #4b0202;
+    font-family: 'Julius Sans One', sans-serif;
+    text-transform: capitalize
+}
+
+/*buttons link classes*/
+.btn-default {
+    align-items: center;
+    background-color: white;
+    color: #76323F;
+    border: 1px solid #76323F;
+    border-radius: 0;
+    text-transform: uppercase;
+}
+
+    .btn-default:hover {
+        background-color: #76323F;
+        color: white;
+        border-color: none;
+    }

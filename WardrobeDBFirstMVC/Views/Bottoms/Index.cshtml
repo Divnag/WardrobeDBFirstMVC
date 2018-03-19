@@ -1,57 +1,31 @@
-﻿@model IEnumerable<WardrobeDBFirstMVC.Models.Bottom>
+﻿<link href="~/Content/StyleSheet.css" rel="stylesheet" />
+@model IEnumerable<WardrobeDBFirstMVC.Models.Bottom>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <a class="glyphicon glyphicon-new-window btn btn-default" href="@Url.Action("Create", "Bottoms")"></a>
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.BottomName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BottomPhoto)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Color)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Occassion.Occassion1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Season.Season)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.BottomName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BottomPhoto)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Color)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Occassion.Occassion1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Season.Season)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.BottomID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.BottomID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.BottomID })
-        </td>
-    </tr>
-}
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <div class="caption ">
+                    <p>
+                        <img src=" @Html.DisplayFor(modelItem => item.BottomPhoto)" class="image" height="100" width="100" />
+                    </p>
 
-</table>
+                    <p>
+
+                        <a class="glyphicon glyphicon-tag btn btn-default" href=" @Url.Action( "Details", new { id=item.BottomID })"></a>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

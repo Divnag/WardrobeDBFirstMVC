@@ -1,4 +1,5 @@
-﻿@model WardrobeDBFirstMVC.Models.Accessory
+﻿<link href="~/Content/StyleSheet.css" rel="stylesheet" />
+@model WardrobeDBFirstMVC.Models.Accessory
 
 @{
     ViewBag.Title = "Create";
@@ -12,7 +13,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Accessory</h4>
+        
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">

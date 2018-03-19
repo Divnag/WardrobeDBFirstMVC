@@ -2,22 +2,20 @@
     font-family: 'Crimson Text', serif;
 }
 
-/*navbar classes*/
+/*navbar */
 .navbar-inverse {
     background-color: #4b0202;
    
 }
 
-
-
-    .navbar-brand:hover {
+.navbar-brand:hover {
         color: white;
     }
 
 ul.nav.navbar-nav{
     float:right;
 }
-/*classes form jumbotron*/
+/*jumbotron*/
 .jumbotron {
     background: url('images/wardrobe.jpg'),no-repeat,center,center;
     background-size: contain;
@@ -35,25 +33,6 @@ ul.nav.navbar-nav{
     color:#4b0202;
 }
 
-
-
-
-/*div.index-infoholder {
-    text-align: center;
-    width: 95%;
-    background-color: rgb(224, 220, 217);
-    margin-top: 20px;
-    margin-bottom: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid #565656;
-}
-
-.index-name {
-    text-align: center;
-}*/
-
-/*text treatment classes*/
 .jumbotron h1 {
     font-family: 'Julius Sans One', sans-serif;
     text-transform: capitalize
@@ -65,18 +44,3 @@ ul.nav.navbar-nav{
     text-transform: capitalize
 }
 
-/*buttons link classes*/
-.btn-default {
-    align-items: center;
-    background-color: white;
-    color: #76323F;
-    border: 1px solid #76323F;
-    border-radius: 0;
-    text-transform: uppercase;
-}
-
-    .btn-default:hover {
-        background-color: #76323F;
-        color: white;
-        border-color: none;
-    }
